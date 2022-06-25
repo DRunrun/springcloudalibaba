@@ -1,0 +1,13 @@
+server:
+  port: 8010
+# 应用名称 （nacos会将该名字当作服务名称）
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: 37e4540a-71e0-41dc-a8b4-4386518eeda2

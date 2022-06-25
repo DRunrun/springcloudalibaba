@@ -1,0 +1,16 @@
+server:
+  port: 8011
+
+# 应用名称 （nacos会将该名字当作服务名称）
+spring:
+  application:
+    name: stock-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: 37e4540a-71e0-41dc-a8b4-4386518eeda2
+        ephemeral: false #永久实例 （默认=true 临时实例）  哪怕宕机了也不会删除实例， 临时实例在心跳检测到服务宕机后则会删除实例
+        weight: 1  # 通常要结合 安装权重的负载均衡策略， 权重越高分配的流量越大
